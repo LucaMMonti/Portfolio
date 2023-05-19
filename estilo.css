@@ -1,0 +1,549 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.info-sub{
+    font-size: 1.25em;
+    color: black;
+    font-weight: bold;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(82, 6, 121);
+    color: white;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+}
+
+.brand{
+    margin-top: -7px;
+    font-size: 1.5em;
+}
+.brand span{
+    color: black;
+}
+
+.menu{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+}
+.menu li{
+    list-style: none;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.menu a{
+    color: white;
+    text-decoration: none;
+}
+.menu a:hover{
+    color: black;
+    font-weight: bold;
+}
+
+/*.menu .home{
+    color: black;
+    font-weight: bold;
+}*/
+
+.toogle-menu,
+.info-sub{
+    display: none;
+}
+
+.main {
+    margin: 0 auto;
+    width: 80vw;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+}
+
+.parrafoMain{
+    text-align: justify;
+}
+
+.main h1{
+    font-size: clamp(4vw, 1.5em, 3em);
+}
+
+.spanMM{
+    color: black;
+}
+
+.spanmi{
+    color: rgb(82, 6, 121);
+    font-weight: bold;
+}
+
+.download-cv{
+    padding: 10px 20px;
+    background-color: rgb(82, 6, 121);
+    color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.download-cv:hover{
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 20px;
+}
+
+.imgPerfil{
+    width: 350px;
+    border:black 4px solid; 
+    margin-left: 200px;
+    border-radius: 20px;
+    height: 450px;
+}
+
+.acerca{
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+
+.imgAcerca{
+    width: 100%;
+    grid-column: 1/5;
+}
+
+.acerca-info{
+    grid-column: 5/10;
+    padding: 3em;
+}
+
+.acerca p{
+    text-align: justify;
+    color: white;
+    margin-bottom: 1em;
+}
+
+.acerca-info h2{
+    font-size: 2em;
+    color: white;
+}
+
+.divider{
+    height: 4px;
+    width: 60px;
+    background-color: rgb(82, 6, 121);
+    margin-top: 8px;
+    margin-bottom: 1em;
+}
+
+.divider2{
+    height: 4px;
+    width: 60px;
+    background-color:black;
+    margin-top: 8px;
+    margin-bottom: 1em;
+}
+
+.leer-mas{
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.leer-mas:hover{
+    background-color: rgb(82, 6, 121);
+    color: white;
+    border: none;
+    border-radius: 20px;
+}
+
+/*.imgcsharp{
+    width: 10%;
+    height: 10%;
+}
+
+.imgcmas{
+    width: 5%;
+    height: 5%;
+    margin-left: 0.5em;
+}
+/*
+.imgsql{
+    width: 10%;
+    height: 10%;
+    
+}*/
+
+.barraskills{
+    margin-bottom: 1em;
+    font-size: 1.25em;
+}
+
+.detalles{
+    width: 100%;
+    display: flex;
+}
+
+.menuskills{
+    position: relative;
+    border: 1px solid white;
+    border-radius: 20px;
+
+}
+
+.menuskills div{
+    position: relative;
+    width: 0;
+    height: 10px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+/* animación de las barras de skills */
+
+#Csharp-menu{
+    animation: csharp-barra 2s forwards;
+    background-color: rgb(82, 6, 121);
+}
+
+@keyframes csharp-barra{
+    100%{
+        width: 80%;
+    }
+
+}
+
+#Cmas-menu{
+    animation: cmas-barra 2s forwards;
+    background-color: blue;
+}
+
+@keyframes cmas-barra{
+    100%{
+        width: 70%;
+    }
+}
+
+#sql-menu{
+    animation: sql-barra 2s forwards;
+    background-color: lightblue;
+}
+
+@keyframes sql-barra{
+    100%{
+        width: 75%;
+    }
+}
+
+#html-menu{
+    animation: html-barra 2s forwards;
+    background-color: blue;
+}
+
+@keyframes html-barra{
+    100%{
+        width: 60%;
+    }
+}
+
+#css-menu{
+    animation: css-barra 2s forwards;
+    background-color: orange;
+}
+
+@keyframes css-barra{
+    100%{
+        width: 60%;
+    }
+}
+
+.portfolio{
+    width: 100vw;
+    background-color: rgb(82, 6, 121);
+    color: white;
+}
+
+.headings-portfolio{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5em;
+}
+
+.headings-portfolio h2{
+    font-size: 2.5em;
+}
+
+.portfolio .contenedor{
+    width: 80vw;
+    height: 80vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.card{
+    width: 300px;
+    background-color: rgb(34, 3, 49);
+    height: 400px;
+    margin: 3em;
+}
+
+.card_imgdrunk{
+    width: 100%;
+    height: 150px;
+    background-image: url(../Portfolio/imagenes/drunkState.png);
+    background-size: cover;
+}
+
+.card_imgsoft{
+    width: 100%;
+    height: 150px;
+    background-image: url(../Portfolio/imagenes/SoftCheck.png);
+    background-size: cover;
+}
+
+.card_imgWin{
+    width: 100%;
+    height: 150px;
+    background-image: url(../Portfolio/imagenes/winForm.png);
+    background-size: cover;
+}
+.card_titulo{
+    padding: 20px;
+    text-align: center;
+}
+
+/*.card_titulo h2{
+    text-decoration: underline;
+}*/
+
+.card_titulo p{
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+.link_proyecto{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.link_proyecto a{
+    color: white;
+    text-decoration: none;
+}
+
+.link_proyecto i{
+    font-size: 1.5em;
+}
+
+
+
+.card .detalles-proyecto{
+    margin: 0 auto;
+    margin: 1em;
+    width: 70%;
+
+}
+.detalles-proyecto-conten{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.card .detalles-proyecto a{
+    text-decoration: none;
+    color: white;
+}
+
+.contacto{
+    width: 100vw;
+    background-color: rgb(82, 6, 121);
+    color: white;
+}
+
+.contacto-headings{
+    font-size: 2em;
+}
+
+
+.contenedor-contacto{
+    padding: 3em;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    margin-top: 2em;
+
+}
+.formulario input::placeholder{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+.formulario input{
+    padding: 5px 10px;
+    margin-bottom: 1em;
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.formulario textarea{
+    height: 150px;
+    background: none;
+    color: white;
+    padding: 1.5em;
+    border: 1px solid white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.formulario textarea::placeholder{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.btn-enviar{
+    padding: 10px 20px;
+    background-color: rgb(82, 6, 121);
+    color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.btn-enviar:hover{
+    background-color: black;
+    border-color: black;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 200px;
+    background-color: black;
+}
+
+.footer-contenedor h2{
+    font-size: 3em;
+}
+.footer-contenedor h5,
+.social-network i{
+    font-size: 1.5em;
+    text-align: center;
+    color: white;
+}
+
+.social-network{
+    display: flex;
+    justify-content: space-evenly;
+    width: 300px;
+    margin-top: 1em;
+}
+
+@media screen and (max-width: 800px){
+   .menu {
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0em;
+    height: 100vh;
+    background-color: rgb(34, 3, 49);
+    z-index: 1;
+    transform: translateX(-110%);
+    transition: all .5s ease-in-out;
+   }
+
+   .show-menu {
+    transform: translateX(0%);
+    transition: all .5s ease-in-out;
+   }
+
+   .toogle-menu{
+    display: block;
+   }
+
+   .fa-bars{
+    font-size: 1.5em;
+    margin-top: -.2em;
+   }
+
+   .toogle-menu .fa-close{
+    font-size: 1.7em;
+    display: none;
+   }
+
+   .menu li{
+    margin: 0.5em 2em;
+   }
+    .main {
+    display: flex;
+    flex-direction: column-reverse;
+   }
+
+   .info {
+    display: flex;
+    margin-left: none;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+   }
+
+
+   .parrafoMain {
+    display: none;
+   }
+
+   .imgPerfil {
+    width: min(70%, 350px);
+    margin-left: 1em;
+   }
+
+   
+   .info-sub {
+    display: block;
+   }
+}
