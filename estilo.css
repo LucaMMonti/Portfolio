@@ -51,6 +51,8 @@ body {
 .menu a{
     color: white;
     text-decoration: none;
+    padding: 10px 20px;
+
 }
 .menu a:hover{
     color: black;
@@ -62,7 +64,7 @@ body {
     font-weight: bold;
 }*/
 
-.toogle-menu,
+.toggle-menu,
 .info-sub{
     display: none;
 }
@@ -118,6 +120,7 @@ body {
     margin-left: 200px;
     border-radius: 20px;
     height: 450px;
+    min-height: 300px;
 }
 
 .acerca{
@@ -147,7 +150,7 @@ body {
 }
 
 .acerca-info h2{
-    font-size: 2em;
+    font-size: clamp(2.5vw, 1.5em, 3em);
     color: white;
 }
 
@@ -164,7 +167,7 @@ body {
     width: 60px;
     background-color:black;
     margin-top: 8px;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
 }
 
 .leer-mas{
@@ -302,14 +305,16 @@ body {
 
 .headings-portfolio h2{
     font-size: 2.5em;
+    
 }
 
 .portfolio .contenedor{
     width: 80vw;
-    height: 80vh;
     margin: 0 auto;
     display: flex;
+    align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .card{
@@ -489,20 +494,20 @@ body {
     justify-content: center;
     position: absolute;
     top: 0;
-    left: 0em;
+    left: 0;
     height: 100vh;
     background-color: rgb(34, 3, 49);
     z-index: 1;
     transform: translateX(-110%);
-    transition: all .5s ease-in-out;
+    transition: all 1s ease-in-out;
    }
 
    .show-menu {
     transform: translateX(0%);
-    transition: all .5s ease-in-out;
+    transition: all 1s ease-in-out;
    }
 
-   .toogle-menu{
+   .toggle-menu{
     display: block;
    }
 
@@ -511,7 +516,7 @@ body {
     margin-top: -.2em;
    }
 
-   .toogle-menu .fa-close{
+   .toggle-menu .fa-close{
     font-size: 1.7em;
     display: none;
    }
@@ -519,19 +524,22 @@ body {
    .menu li{
     margin: 0.5em 2em;
    }
-    .main {
+    .main,
+    .acerca{
     display: flex;
     flex-direction: column-reverse;
    }
 
+   .imgAcerca{
+    display: none;
+   }
+
    .info {
     display: flex;
-    margin-left: none;
     justify-content: center;
     flex-direction: column;
     align-items: center;
    }
-
 
    .parrafoMain {
     display: none;
@@ -542,8 +550,11 @@ body {
     margin-left: 1em;
    }
 
-   
    .info-sub {
     display: block;
+   }
+
+   .formulario{
+    width: 80vw;
    }
 }

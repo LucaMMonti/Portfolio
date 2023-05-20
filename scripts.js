@@ -1,11 +1,21 @@
 
+
 let menu = document.getElementById('menu');
-let toogle_open = document.getElementById('toogle_open');
-let toogle_close = document.getElementById('toogle_close');
+let toggle_open = document.getElementById('toggle_open');
+let toggle_close = document.getElementById('toggle_close');
 
-toogle_open.addEventListener('click', toogleMenu);
-toogle_close.addEventListener('click', toogleMenu);
+toggle_open.addEventListener('click', toggleMenu);
+toggle_close.addEventListener('click', toggleMenu);
 
-function toogleMenu() {
-    menu.classList.toggle('show-menu');
+function toggleMenu() {
+  menu.classList.toggle('show-menu');
+
+  if(menu.classList.contains('show-menu')) {
+    toggle_open.style.display = 'none';
+    toggle_close.style.display = 'block';
+  }
+  else {
+    toggle_open.style.display = 'block';
+    toggle_close.style.display = 'none';
+  }
 }
