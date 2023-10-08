@@ -19,3 +19,19 @@ function toggleMenu() {
     toggle_close.style.display = 'none';
   }
 }
+
+document.addEventListener('scroll', function() {
+  let header = document.querySelector('header');
+  
+  let inicioPos = document.querySelector('#Inicio').offsetTop;
+  let acercaPos = document.querySelector('#Acerca').offsetTop;
+  let portfolioPos = document.querySelector('#Portfolio').offsetTop;
+
+  // Si estás dentro de la sección "Acerca de mí"
+  if (window.scrollY >= acercaPos && window.scrollY < portfolioPos) {
+      header.classList.add('header-acerca-color');
+  } else {
+      header.classList.remove('header-acerca-color');
+  }
+});
+
