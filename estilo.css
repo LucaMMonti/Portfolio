@@ -322,6 +322,14 @@ body {
     background-color: rgb(34, 3, 49);
     height: 400px;
     margin: 3em;
+
+    transition: transform 0.3s, box-shadow 0.3s; /* Suavizar la transformación y la sombra */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Sombra inicial */
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Mover la tarjeta hacia arriba cuando se pasa el cursor sobre ella */
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2); /* Sombra */
 }
 
 .card_imgdrunk{
